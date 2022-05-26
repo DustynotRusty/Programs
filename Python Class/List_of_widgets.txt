@@ -1,0 +1,17 @@
+List of widgets:
+Button
+Canvas
+Label
+Listbox
+Menubutton
+Menu
+Message
+Radiobutton
+Scale
+Sdcrollbar
+Text
+Toplevel
+Spinbox
+PanedWindow
+LabelFrame
+MessageBox
