@@ -24,9 +24,9 @@ class MyButton:
                          height=2, command=lambda: self.buttonClick(3))
 
         # attach buttons to the frame
-        self.b1.grid(row=0, column=0, padx=10, pady=15)
-        self.b2.grid(row=1, column=1, padx=10, pady=15)
-        self.b3.grid(row=2, column=0, padx=10, pady=15)
+        self.b1.place(x=20, y=30, width=100, height=50)
+        self.b2.place(x=20, y=100, width=100, height=50)
+        self.b3.place(x=100, y=200, width=100, height=50)
 
     # method to be called when the button is clicked
     def buttonClick(self, num):
