@@ -1,21 +1,17 @@
-class Rectangle():
-    def __init__(self, l, w):
-        self.length = l
-        self.width = w
-
-    def rectangle_area(self):
-        return self.length*self.width
-
-    def perimeter(self):
-        return 2*(self.length+self.width)
-
-    def isSquare(self):
-        return self.length == self.width
+def addComplex(z1, z2):
+    return z1 + z2
 
 
-length = int(input())
-width = int(input())
-newRectangle = Rectangle(length, width)
-print(newRectangle.rectangle_area())
-print(newRectangle.isSquare())
-print(newRectangle.perimeter())
+z1 = complex(2, 3)
+z2 = complex(1, 2)
+print("Addition is : ", addComplex(z1, z2))
+# function that returns a complex number after subtracting
+
+
+def subComplex(z1, z2):
+    return z1-z2
+
+
+z1 = complex(2, 3)
+z2 = complex(1, 2)
+print("Subtraction is : ", subComplex(z1, z2))
