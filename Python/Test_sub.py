@@ -1,17 +1,11 @@
-def generateParenthesis(n,  Open,  close,  s, ans):
-    if(Open == n and close == n):
-        ans.append(s)
-        return
-    if(Open < n):
-        generateParenthesis(n, Open+1, close, s+"(", ans)
-    if(close < Open):
-        generateParenthesis(n, Open, close + 1, s+")", ans)
+t_c = int(input())
+for _ in range(t_c):
+    a, b = map(int, input().split())
 
+    hcf = 1
 
-n = int(input())
-
-
-ans = []
-generateParenthesis(n, 0, 0, "", ans)
-for s in ans:
-    print(s)
+    for i in range(2, a+1):
+        if(a % i == 0 and b % i == 0):
+            hcf = i
+    lcm = int((a*b)/(hcf))
+    print(lcm, hcf)
