@@ -1,11 +1,25 @@
-t_c = int(input())
-for _ in range(t_c):
-    a, b = map(int, input().split())
+import tkinter as tk
+from tkinter.colorchooser import *
 
-    hcf = 1
 
-    for i in range(2, a+1):
-        if(a % i == 0 and b % i == 0):
-            hcf = i
-    lcm = int((a*b)/(hcf))
-    print(lcm, hcf)
+def factorial(n):
+    # single line to find factorial
+    return 1 if (n == 1 or n == 0) else n * factorial(n-1)
+
+
+def calculate():
+    result = factorial(int(entryText.get()))
+    info.config(text=result)
+
+
+mw = tk.Tk()
+mw.title('Factorial!!!')
+mw.geometry("200x200")
+mw.resizable(0, 0)
+entryText = tk.Entry(text=1, bg='white', fg='black')
+entryText.place(x=50, y=25, width=100, height=25)
+btn = tk.Button(text='Compute', command=calculate)
+btn.place(x=50, y=75, width=100, height=25)
+info = tk.Label(text='result', bg='white', fg='black')
+info.place(x=50, y=125, width=100, height=25)
+mw.mainloop()
